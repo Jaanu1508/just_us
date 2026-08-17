@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="heart">💗</div>
 
-            <h1>Hiiiiiiiiiiiiii ❤️</h1>
+            <h1>Hiiiiiiiiiiiiiii ❤️</h1>
 
             <p>
                 Choose one...
