@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </h1>
 
                                     <img
-                                        src="images/photo 1.jpeg"
+                                        src="photo 1.jpeg"
                                         class="couple-photo"
                                     >
 
@@ -598,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                                     class="memory-video"
                                                                 >
                                                                     <source
-                                                                        src="videos/our-video.mp4"
+                                                                        src="our-video.mp4"
                                                                         type="video/mp4"
                                                                     >
                                                                 </video>
