@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,22 +35,28 @@
 
 
     <!-- =========================
-         SCREEN 1
+         MAIN QUESTION SCREEN
     ========================== -->
 
-    <section id="questionScreen" class="screen">
+    <section class="question-screen">
 
-        <h1>Wanna read this? 💗</h1>
+        <div class="heart">💗</div>
 
-        <p>There’s something I want you to see...</p>
+        <h1>
+            Wanna read this? 💗
+        </h1>
+
+        <p>
+            There’s something I want you to see...
+        </p>
 
         <div class="buttons">
 
-            <button id="yesBtn">
+            <button id="yesButton">
                 YES ❤️
             </button>
 
-            <button id="noBtn">
+            <button id="noButton">
                 NO 😭
             </button>
 
@@ -59,76 +66,11 @@
 
 
     <!-- =========================
-         SCREEN 2
+         SCRIPT
     ========================== -->
-
-    <section id="choiceScreen" class="screen hidden">
-
-        <h1>What do you wanna read? 💭</h1>
-
-        <div class="choice-container">
-
-            <button class="choice" id="happyBtn">
-
-                <span>😊</span>
-
-                <strong>HAPPY</strong>
-
-            </button>
-
-
-            <button class="choice" id="sadBtn">
-
-                <span>🥺</span>
-
-                <strong>SAD</strong>
-
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         HAPPY SCREEN
-    ========================== -->
-
-    <section id="happyScreen" class="screen hidden">
-
-        <div class="matter-box">
-
-            <h2>💗 Happy</h2>
-
-            <p id="happyText">
-                Your happy content goes here... ✨
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SAD SCREEN
-    ========================== -->
-
-    <section id="sadScreen" class="screen hidden">
-
-        <div class="matter-box">
-
-            <h2>🥺 Sad</h2>
-
-            <p id="sadText">
-                Your sad content goes here... 💔
-            </p>
-
-        </div>
-
-    </section>
-
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
