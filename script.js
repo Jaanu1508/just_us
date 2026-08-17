@@ -1,646 +1,712 @@
-const yesButton = document.getElementById("yesButton");
-const noButton = document.getElementById("noButton");
+document.addEventListener("DOMContentLoaded", function () {
 
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
 
-// ======================================================
-// FIRST YES → HAPPY / SAD
-// ======================================================
+    // ======================================================
+    // FIRST YES → HAPPY / SAD
+    // ======================================================
 
-yesButton.addEventListener("click", function () {
-
-    document.querySelector(".question-screen").innerHTML = `
-
-        <div class="heart">💗</div>
-
-        <h1>What do you wanna read? ❤️</h1>
-
-        <p>
-            Choose one...
-        </p>
-
-        <div class="buttons">
-
-            <button id="happyButton">
-                HAPPY 😊
-            </button>
-
-            <button id="sadButton">
-                SAD 🥺
-            </button>
-
-        </div>
-
-    `;
-
-
-    const happyButton =
-        document.getElementById("happyButton");
-
-    const sadButton =
-        document.getElementById("sadButton");
-
-
-    // ==================================================
-    // HAPPY
-    // ==================================================
-
-    happyButton.addEventListener("click", function () {
+    yesButton.addEventListener("click", function () {
 
         document.querySelector(".question-screen").innerHTML = `
 
             <div class="heart">💗</div>
 
-            <h1>
-                Hy Bangaram... ❤️
-            </h1>
+            <h1>What do you wanna read? ❤️</h1>
 
             <p>
-                Wanna see our story? 🥹
+                Choose one...
             </p>
 
             <div class="buttons">
 
-                <button id="storyYesButton">
-                    YES ❤️
+                <button id="happyButton">
+                    HAPPY 😊
                 </button>
 
-                <button id="storyNoButton">
-                    NO 😭
+                <button id="sadButton">
+                    SAD 🥺
                 </button>
 
             </div>
 
         `;
 
+        const happyButton =
+            document.getElementById("happyButton");
 
-        const storyYesButton =
-            document.getElementById("storyYesButton");
-
-        const storyNoButton =
-            document.getElementById("storyNoButton");
+        const sadButton =
+            document.getElementById("sadButton");
 
 
-        // ==============================================
-        // WANNA SEE OUR STORY → YES
-        // ==============================================
+        // ==================================================
+        // HAPPY
+        // ==================================================
 
-        storyYesButton.addEventListener("click", function () {
+        happyButton.addEventListener("click", function () {
 
             document.querySelector(".question-screen").innerHTML = `
 
                 <div class="heart">💗</div>
 
-               <h1>Yayyy! ❤️</h1>
+                <h1>
+                    Hy Bangaram... ❤️
+                </h1>
 
-        <p>
-            Naku telusu nuvu vasthavu ani... ❤️<br><br>
-            Daa veli okasari nuvu nenu ela kalusukunamo gurthu chestha ...
-        </p>
+                <p>
+                    Wanna see our story? 🥹
+                </p>
 
-                <button id="storyStartButton">
-                    Continue ❤️
-                </button>
+                <div class="buttons">
+
+                    <button id="storyYesButton">
+                        YES ❤️
+                    </button>
+
+                    <button id="storyNoButton">
+                        NO 😭
+                    </button>
+
+                </div>
 
             `;
 
+            const storyYesButton =
+                document.getElementById("storyYesButton");
 
-            const storyStartButton =
-                document.getElementById("storyStartButton");
+            const storyNoButton =
+                document.getElementById("storyNoButton");
 
 
-            // ==========================================
-            // CONTINUE → WHERE IT ALL BEGAN
-            // ==========================================
+            // ==============================================
+            // WANNA SEE OUR STORY → YES
+            // ==============================================
 
-            storyStartButton.addEventListener("click", function () {
+            storyYesButton.addEventListener("click", function () {
 
                 document.querySelector(".question-screen").innerHTML = `
 
                     <div class="heart">💗</div>
 
-                    <h1>
-                        Where It All Began... 💕
-                    </h1>
+                    <h1>Yayyy! ❤️</h1>
 
                     <p>
-                        Every beautiful story has a beginning... ❤️
-                        <br><br>
-                        And ours began in college
-
+                        Naku telusu nuvu vasthavu ani... ❤️<br><br>
+                        Daa veli okasari nuvu nenu ela kalusukunamo gurthu chestha ...
                     </p>
 
-                    <button id="beginningButton">
+                    <button id="storyStartButton">
                         Continue ❤️
                     </button>
 
                 `;
 
+                const storyStartButton =
+                    document.getElementById("storyStartButton");
 
-                const beginningButton =
-                    document.getElementById("beginningButton");
 
+                // ==========================================
+                // CONTINUE → WHERE IT ALL BEGAN
+                // ==========================================
 
-                // ======================================
-                // → FIRST MEETING
-                // ======================================
-
-                beginningButton.addEventListener("click", function () {
+                storyStartButton.addEventListener("click", function () {
 
                     document.querySelector(".question-screen").innerHTML = `
 
                         <div class="heart">💗</div>
 
                         <h1>
-                            Our 1st Meeting... 💟
+                            Where It All Began... 💕
                         </h1>
-                   <p>
-                    It all started with our common friend, Madhu. ❤️
 
-                    <br><br>
+                        <p>
+                            Every beautiful story has a beginning... ❤️
+                            <br><br>
+                            And ours began in college
+                        </p>
 
-                    Asalu dhanitho frndshp chesi undaka pothe nuvu dhorike vadive kadhu ra babu 🙆...
-                    bidda enthaina chala manchidhi ninu naku antakattindhi 😑
-
-                    <br><br>
-
-                    Nrml ga vedi peru rajesh ani chpindhi...
-                    peru kastha vinthaga undhi anukuna...
-                    but ne voice vinaka...abbahh ani anukuna...
-                    apati nunchi ne vaipu nunchi dhaniki call vasthe nene chuse dhani 1stu...
-                    nene lift chesi dhaniki iche dhani 😅
-
-                    <br><br>
-
-                    And then, mhp degara aa roju nuvu ala matladesariki...
-                    edho teliyali feeling chala bagundhi...
-                    chala nachindhi...
-                    ala netho kalisipothu una inka...
-                    nuvu chesina panulu...ne matalu bale undevi eheee 💋
-
-                    <br><br>
-
-                    <strong>
-                    nuvu natho ana 1st sentence
-                    "Dhanitho thirigithe nashanam ayipothavu nuvu kuda ani anavu" 😂...
-                    inka gurthu naku aa roju ne face ne hairstyle ne matalu anniii
-                    </strong>
-
-                    <br><br>
-
-                    Little did we know that one small introduction
-                    would become the beginning of our story. 💗
-                </p>
-
-
-                        <button id="firstMeetingNext">
-                           One more memory ❤️
+                        <button id="beginningButton">
+                            Continue ❤️
                         </button>
 
                     `;
 
+                    const beginningButton =
+                        document.getElementById("beginningButton");
 
-                    const firstMeetingNext =
-                        document.getElementById("firstMeetingNext");
 
+                    // ======================================
+                    // → FIRST MEETING
+                    // ======================================
 
-                    // ==================================
-                    // → LOOK AT US NOW
-                    // ==================================
-
-                    firstMeetingNext.addEventListener("click", function () {
+                    beginningButton.addEventListener("click", function () {
 
                         document.querySelector(".question-screen").innerHTML = `
 
                             <div class="heart">💗</div>
 
                             <h1>
-                                Look At Us Now... ❤️
+                                Our 1st Meeting... 💟
                             </h1>
-                      <p>
-                        From a random introduction by Madhu...
-                        <br><br>
 
-                        to becoming such an important part of
-                        each other's lives. 🥺
+                            <p>
 
-                        <br><br>
+                                It all started with our common friend, Madhu. ❤️
 
-                        Funny how the smallest moments can become
-                        the most beautiful memories. 💕
-                    </p>
+                                <br><br>
 
-                            <button id="nextChapterButton">
-                                Continue ❤️
+                                Asalu dhanitho frndshp chesi undaka pothe nuvu dhorike vadive kadhu ra babu 🙆...
+                                bidda enthaina chala manchidhi ninu naku antakattindhi 😑
+
+                                <br><br>
+
+                                Nrml ga vedi peru rajesh ani chpindhi...
+                                peru kastha vinthaga undhi anukuna...
+                                but ne voice vinaka...abbahh ani anukuna...
+                                apati nunchi ne vaipu nunchi dhaniki call vasthe nene chuse dhani 1stu...
+                                nene lift chesi dhaniki iche dhani 😅
+
+                                <br><br>
+
+                                And then, mhp degara aa roju nuvu ala matladesariki...
+                                edho teliyali feeling chala bagundhi...
+                                chala nachindhi...
+                                ala netho kalisipothu una inka...
+                                nuvu chesina panulu...ne matalu bale undevi eheee 💋
+
+                                <br><br>
+
+                                <strong>
+                                nuvu natho ana 1st sentence
+                                "Dhanitho thirigithe nashanam ayipothavu nuvu kuda ani anavu" 😂...
+                                inka gurthu naku aa roju ne face ne hairstyle ne matalu anniii
+                                </strong>
+
+                                <br><br>
+
+                                Little did we know that one small introduction
+                                would become the beginning of our story. 💗
+
+                            </p>
+
+                            <button id="firstMeetingNext">
+                                One more memory ❤️
                             </button>
 
                         `;
 
-
-                        const nextChapterButton =
-                            document.getElementById("nextChapterButton");
+                        const firstMeetingNext =
+                            document.getElementById("firstMeetingNext");
 
 
                         // ==================================
-                        // → OUR NEXT CHAPTER + PHOTO
+                        // → LOOK AT US NOW
                         // ==================================
 
-                        nextChapterButton.addEventListener("click", function () {
+                        firstMeetingNext.addEventListener("click", function () {
 
                             document.querySelector(".question-screen").innerHTML = `
 
                                 <div class="heart">💗</div>
 
                                 <h1>
-                                    Our Next Chapter... ❤️
+                                    Look At Us Now... ❤️
                                 </h1>
 
-                                <img
-                                    src="images/photo 1.jpeg"
-                                    class="couple-photo"
-                                >
-
                                 <p>
-                                    <!-- Your picture is above -->
+                                    From a random introduction by Madhu...
+                                    <br><br>
+
+                                    to becoming such an important part of
+                                    each other's lives. 🥺
+
+                                    <br><br>
+
+                                    Funny how the smallest moments can become
+                                    the most beautiful memories. 💕
                                 </p>
 
-                                <button id="chapterButton">
+                                <button id="nextChapterButton">
                                     Continue ❤️
                                 </button>
 
                             `;
 
-
-                            const chapterButton =
-                                document.getElementById("chapterButton");
+                            const nextChapterButton =
+                                document.getElementById("nextChapterButton");
 
 
                             // ==================================
-                            // → STORY AFTER PHOTO
+                            // → OUR NEXT CHAPTER + PHOTO
                             // ==================================
 
-                            chapterButton.addEventListener("click", function () {
+                            nextChapterButton.addEventListener("click", function () {
 
                                 document.querySelector(".question-screen").innerHTML = `
 
                                     <div class="heart">💗</div>
 
                                     <h1>
-                                        Another Memory... 💕
+                                        Our Next Chapter... ❤️
                                     </h1>
 
-                                     <p>
+                                    <img
+                                        src="images/photo 1.jpeg"
+                                        class="couple-photo"
+                                    >
 
-                                Bhargavi eh ra naku anni...dhanine namme dhani nenu inka evaru odhu anukune dhani...asalu idharam abbailu eh odhu mana lyf lo ani decide ayamu...aa tym lo ichavu entry na lyf lokiiii...ala oka yadhava laga
+                                    <p>
+                                        <!-- Your picture is above -->
+                                    </p>
 
-                                <br><br>
-
-                                Nakemo tension bhargavi velipothundhi...intlo pampanu antunaru...phn kuda undedhi kadhu...okadhane velali ante bayamu naku...evarini nammali anipile
-
-                                <br><br>
-
-                                Actuallyy aa tym lo gupta ne kastha close naku ne kana...vadini kuda adagali anipiledhu naku...netho apatiki just oka 2 tyms call anukunta anthe...ekuva meet kuda avala...chat cheskole but naku nine adagali anipichindhi...nine nammali anipichindhi...
-
-                                <br><br>
-
-                                asalu boys touch antene bad ga feel aye nenu...oka roju ne kaala madhilo kurchopetukuna i felt safe and nrml...vachi adiga ne medha hopes petesukuna inka motham
-
-                                <br><br>
-
-                                nuvu avadhu ante inka edchesa aa roju...last ki vastha anavu..hammayaa anukuna...aa bike medha inka ela patukovali ekada patukovali ra nuvu antha fast ga velthe...malla nanu antunavu nuve patukunavu ani...
-
-                                <br><br>
-
-                                nuve na cheyyi patukoni lakuni ala chusthe inka ela feel avali...frnd gane chusa apatiki nenu...but nenu frnd la kuda chala possessive feel avtha...
-
-                                <br><br>
-
-                                aa roje nuvu bhargavi tho ala undatam nachale naku...naku ne medha aa roje istam vachindhi...but adhi chpthe ekada pedthavo ani bayam vesi chpale...
-
-                                <br><br>
-
-                                coz madhu naku chpindhi rajesh ki evaraina prop chesina reject chesthadu ani...antha manchiga unavalan reject chesavu nanu chyakunda endhuku untavu ani bayam vesi niku chpaledhu...
-
-                                <br><br>
-
-                                naku bike medhe chpdham anukuna but bayam vesi agipoya
-
-                                <br><br>
-
-                                But nuvu mudhu adagagane em chyalo ardham kaledhu...mind panichyale naku...vedu enti ila adigesadu ani...odhu ana...malli adigavu...inka em aalochinchale...petesaaa...
-
-                                <br><br>
-
-                                edho teliyali feeling inka...petesaka...chala happy ga chala edho teliyani manchi feeling
-
-                                <br><br>
-
-                                but inko doubt nxt day madhu tho velthunavu adhi niku pettesthe😑...no once na kallu padaka adhi nadhe inka...sarele em kadhu le ani vadhilesa
-
-                                <br><br>
-
-                                Next day nuvu vachi madhu gadi matter lo godava paddamu...h block lo...i said sorry...but nuvu sorry ela chpalo kuda nene nerpichala ani anavu apudu ardham ayindhi so malli mudhu peta...
-
-                                <br><br>
-
-                                ala eye contact oka 5 secs ala chusthu unavu...ala chusthunte nuvu...heartbeat raise ayipoyi ayasam vachesindhi bro 🤥
-
-                                <br><br>
-
-                                nuvu kuda same feel ayavu...inka tharvatha idhi ati em chyakundane ayasam vachesthundhi ani dhooram ga velipoyavu inka...naku apudu just ne medha istam mathrame undhi inkem ledhu
-
-                                <br><br>
-
-                                slow ga slow ga feelings peruguthu vachayi but ne medha oka doubt undedhi...nuvu kuda just na meeda serious ga undava emo ani...but i just like you niku no chpalekapoya...
-
-                                <br><br>
-
-                                asalu apudu love odhu anukuna andhuke netho una lekapothe asalu apude dhooram ayipoye dhani but apudu feelings peruguthayi ani teliyaka undipoya ipudu chudu entha perigipoindho 🫠
-
-                                <br><br>
-
-                                Naku aa doubt manam meet aye dhaka undhi...manam meet avadam kuda naku apudu bayam ga nammakam lekunda ne aya
-
-                                <br><br>
-
-                                Mana meet naku ela feel ayindho chptha but aa lopu niku oka chinnaaa question nana 😁
-
-                            </p>
-
-                                    <button id="memoryNextButton">
+                                    <button id="chapterButton">
                                         Continue ❤️
                                     </button>
 
                                 `;
 
-
-                                const memoryNextButton =
-                                    document.getElementById("memoryNextButton");
+                                const chapterButton =
+                                    document.getElementById("chapterButton");
 
 
                                 // ==================================
-                                // → FIRST QUESTION
+                                // → STORY AFTER PHOTO
                                 // ==================================
 
-                                memoryNextButton.addEventListener("click", function () {
+                                chapterButton.addEventListener("click", function () {
 
                                     document.querySelector(".question-screen").innerHTML = `
 
                                         <div class="heart">💗</div>
 
                                         <h1>
-                                            Oka chinna question... 😁
-                                        </h1>
-       <p>
-                                    Rajeshhhh manam meet ayina date gurthu undha? ❤️
-                                </p>
-
-                                <button id="dateYesButton">
-                                    YES ❤️
-                                </button>
-
-                                <button id="dateNoButton">
-                                    NO 😐
-                                </button>
-                            `;
-
-                            const dateYesButton =
-                                document.getElementById("dateYesButton");
-
-                            const dateNoButton =
-                                document.getElementById("dateNoButton");
-
-                            // ================================
-                            // YES ANSWER
-                            // ================================
-
-                            dateYesButton.addEventListener("click", function () {
-
-                                document.querySelector(".question-screen").innerHTML = `
-                                    <div class="heart">💗</div>
-
-                                    <h1>YESSSS ❤️</h1>
-
-                                    <p>
-                                        Good boy ne pranalu ela kapadukovalo niku telusu ra...
-                                        19th November 2025...
-                                        one of the spcl day in my entire lifeeeee
-
-                                        <br><br>
-
-                                        Kindha una button nokku podham nxt page ki...
-                                        naku ela feel ayindho chpthaaa
-                                    </p>
-
-                                    <button id="yesNextButton">
-                                        Padhaaaa ❤️
-                                    </button>
-                                `;
-
-                                const yesNextButton =
-                                    document.getElementById("yesNextButton");
-
-                                yesNextButton.addEventListener("click", function () {
-
-                                    document.querySelector(".question-screen").innerHTML = `
-                                        <div class="heart">💗</div>
-
-                                        <h1>
-                                            Hahaha naku telusu nuvu vasthavu bro ani 👐🏻
+                                            Another Memory... 💕
                                         </h1>
 
                                         <p>
-                                            Mana 1st hug🫂...chala safe and chala pure ga anipichindhi...asalu physical touch antene nachani naku...ne hug oka safe place la anipichindhi
-                                            asalu boys sex kosame approach avtharu ani anukune dhani...nammakam ledhu....ninu nammale...asalu sex ante chiraku yaak anukunedhani....but adhi pure thing ani prove chesavu 🥹...nuvu sex kosam e approach ayavu ani nenu antale but naku 1st lo adhe anipichindhi🙂...kani mana meet tharvatha...chala haayi ga undhi...bayam emi lekunda prashanthamuga undhi😮‍💨...ne kiss ne hug ne touch ne look anni safe anipichini🤞🏻...nuvu eh thought tho chesavo telidhu kani...naku mathram lust kanipile bro...evaru natho chyanivi chesavu...chudanivi nuvu chusavu...evaru nanu touch chyani way lo chesavu...chala safe and happy ga anipichindhi nana 😚
-                                            aa roju gudiki veli swamy ki chpukuna...chala pure ga anipichindhi swamy...vadni etti paristhithulalo naku dhooram chyaku ani 🥺...love ani chpalenu but oka positive feeling ne medha😌...chala bagundhii nana aa feeling 
-                                            Asalu dheeni vala love vachindhi ani chpatale nenu...just safe feel vachindhi...safe ani andhari degara anipidhu naku...ne degara anipichindhi chaalaa safe gaa...my safest place is ur armsss nanaaaa 😘
-                                        <br><br>
-                                        So finally em chpthuna ante...mana meet vala naku ne medha inka impression perigindhi...inka istam perigindhi😚
-                                        <br><br>
-                                        Enti alisipoyava chahdivi chadivi...inka unai daaa😁
+
+                                            Bhargavi eh ra naku anni...dhanine namme dhani nenu inka evaru odhu anukune dhani...asalu idharam abbailu eh odhu mana lyf lo ani decide ayamu...aa tym lo ichavu entry na lyf lokiiii...ala oka yadhava laga
+
+                                            <br><br>
+
+                                            Nakemo tension bhargavi velipothundhi...intlo pampanu antunaru...phn kuda undedhi kadhu...okadhane velali ante bayamu naku...evarini nammali anipile
+
+                                            <br><br>
+
+                                            Actuallyy aa tym lo gupta ne kastha close naku ne kana...vadini kuda adagali anipiledhu naku...netho apatiki just oka 2 tyms call anukunta anthe...ekuva meet kuda avala...chat cheskole but naku nine adagali anipichindhi...nine nammali anipichindhi...
+
+                                            <br><br>
+
+                                            asalu boys touch antene bad ga feel aye nenu...oka roju ne kaala madhilo kurchopetukuna i felt safe and nrml...vachi adiga ne medha hopes petesukuna inka motham
+
+                                            <br><br>
+
+                                            nuvu avadhu ante inka edchesa aa roju...last ki vastha anavu..hammayaa anukuna...aa bike medha inka ela patukovali ekada patukovali ra nuvu antha fast ga velthe...malla nanu antunavu nuve patukunavu ani...
+
+                                            <br><br>
+
+                                            nuve na cheyyi patukoni lakuni ala chusthe inka ela feel avali...frnd gane chusa apatiki nenu...but nenu frnd la kuda chala possessive feel avtha...
+
+                                            <br><br>
+
+                                            aa roje nuvu bhargavi tho ala undatam nachale naku...naku ne medha aa roje istam vachindhi...but adhi chpthe ekada pedthavo ani bayam vesi chpale...
+
+                                            <br><br>
+
+                                            coz madhu naku chpindhi rajesh ki evaraina prop chesina reject chesthadu ani...antha manchiga unavalan reject chesavu nanu chyakunda endhuku untavu ani bayam vesi niku chpaledhu...
+
+                                            <br><br>
+
+                                            naku bike medhe chpdham anukuna but bayam vesi agipoya
+
+                                            <br><br>
+
+                                            But nuvu mudhu adagagane em chyalo ardham kaledhu...mind panichyale naku...vedu enti ila adigesadu ani...odhu ana...malli adigavu...inka em aalochinchale...petesaaa...
+
+                                            <br><br>
+
+                                            edho teliyali feeling inka...petesaka...chala happy ga chala edho teliyani manchi feeling
+
+                                            <br><br>
+
+                                            but inko doubt nxt day madhu tho velthunavu adhi niku pettesthe😑...no once na kallu padaka adhi nadhe inka...sarele em kadhu le ani vadhilesa
+
+                                            <br><br>
+
+                                            Next day nuvu vachi madhu gadi matter lo godava paddamu...h block lo...i said sorry...but nuvu sorry ela chpalo kuda nene nerpichala ani anavu apudu ardham ayindhi so malli mudhu peta...
+
+                                            <br><br>
+
+                                            ala eye contact oka 5 secs ala chusthu unavu...ala chusthunte nuvu...heartbeat raise ayipoyi ayasam vachesindhi bro 🤥
+
+                                            <br><br>
+
+                                            nuvu kuda same feel ayavu...inka tharvatha idhi ati em chyakundane ayasam vachesthundhi ani dhooram ga velipoyavu inka...naku apudu just ne medha istam mathrame undhi inkem ledhu
+
+                                            <br><br>
+
+                                            slow ga slow ga feelings peruguthu vachayi but ne medha oka doubt undedhi...nuvu kuda just na meeda serious ga undava emo ani...but i just like you niku no chpalekapoya...
+
+                                            <br><br>
+
+                                            asalu apudu love odhu anukuna andhuke netho una lekapothe asalu apude dhooram ayipoye dhani but apudu feelings peruguthayi ani teliyaka undipoya ipudu chudu entha perigipoindho 🫠
+
+                                            <br><br>
+
+                                            Naku aa doubt manam meet aye dhaka undhi...manam meet avadam kuda naku apudu bayam ga nammakam lekunda ne aya
+
+                                            <br><br>
+
+                                            Mana meet naku ela feel ayindho chptha but aa lopu niku oka chinnaaa question nana 😁
+
                                         </p>
 
-                                        <button id="nextStoryButton">
-                                            Nokkavalenu 😆
+                                        <button id="memoryNextButton">
+                                            Continue ❤️
                                         </button>
+
                                     `;
 
-                                            const storyNextButton =
-                                                document.getElementById("storyNextButton");
+                                    const memoryNextButton =
+                                        document.getElementById("memoryNextButton");
 
 
-                                            // ==================================
-                                            // → ANOTHER STORY PAGE
-                                            // ==================================
+                                    // ==================================
+                                    // → FIRST QUESTION
+                                    // ==================================
 
-                                            storyNextButton.addEventListener("click", function () {
+                                    memoryNextButton.addEventListener("click", function () {
+
+                                        document.querySelector(".question-screen").innerHTML = `
+
+                                            <div class="heart">💗</div>
+
+                                            <h1>
+                                                Oka chinna question... 😁
+                                            </h1>
+
+                                            <p>
+                                                Rajeshhhh manam meet ayina date gurthu undha? ❤️
+                                            </p>
+
+                                            <div class="buttons">
+
+                                                <button id="dateYesButton">
+                                                    YES ❤️
+                                                </button>
+
+                                                <button id="dateNoButton">
+                                                    NO 😐
+                                                </button>
+
+                                            </div>
+
+                                        `;
+
+                                        const dateYesButton =
+                                            document.getElementById("dateYesButton");
+
+                                        const dateNoButton =
+                                            document.getElementById("dateNoButton");
+
+
+                                        // ================================
+                                        // YES ANSWER
+                                        // ================================
+
+                                        dateYesButton.addEventListener("click", function () {
+
+                                            document.querySelector(".question-screen").innerHTML = `
+
+                                                <div class="heart">💗</div>
+
+                                                <h1>YESSSS ❤️</h1>
+
+                                                <p>
+                                                    Good boy ne pranalu ela kapadukovalo niku telusu ra...
+                                                    19th November 2025...
+                                                    one of the spcl day in my entire lifeeeee
+
+                                                    <br><br>
+
+                                                    Kindha una button nokku podham nxt page ki...
+                                                    naku ela feel ayindho chpthaaa
+                                                </p>
+
+                                                <button id="yesNextButton">
+                                                    Padhaaaa ❤️
+                                                </button>
+
+                                            `;
+
+                                            const yesNextButton =
+                                                document.getElementById("yesNextButton");
+
+
+                                            yesNextButton.addEventListener("click", function () {
 
                                                 document.querySelector(".question-screen").innerHTML = `
 
                                                     <div class="heart">💗</div>
 
-                                               <h1>Before you and After you</h1>
+                                                    <h1>
+                                                        Hahaha naku telusu nuvu vasthavu bro ani 👐🏻
+                                                    </h1>
 
-                                            <p>
-                                                Aa title enta anukuntunava...nuvu na life loki raka mundhu ela undedhi...nuvu vachaka ela undedhi ani chpabothunaaaaaaaaaaa....
-                                                Nuvu raka mundhu varaku...boys tho antha manesa inka...malli aa madhu vala parichayam ayaru thapa...valatho kuda limits lone undedhani...intiki vastha padukunta...edhoakti thidtharu padutha...happiness ledhu na lyf lo...daddy ni byt ki teskuvelamante chinna pillava ani thitte valu...intlo intlone una nenu almost 1 yr motham...aa tv thappa vere lokam ledhu...pichi ekkedhi...evaru matladaru natho roju thitte valu eamcet raledhu mains raledhu ani...nau interest ledhu vatilo ante vinale asalu...chiraku vachedhi...chachipodham anukune dhani...asalu oka peak level ki velipoya dhookedham anukuna ma terrace nunchi...naku jaanu ki himaja ki godavalu...evaru leru naku inka...sibi tho manesa...vaditho undalekapoya...act chyalekapoya...vadu chachipotha adhi idhi ani matladadu...em chyalo ardham kaka vad em ana silent udne dhani...oka point lo sex topic techadu naku nachale naku inka chala uncomfrotable ga anipichi manes avaditho blokced loki veipoyadu...dhaniki mundhu ma annayaaa ani udnevadu vadu anthe chesadu abadhalu chpi nanu restrict chesi nanu cntrl chesi...inka jeevitham emdha virakthi vachesindhi...apude chparu orientation start ani...hammayaaa anukuna vela orientation ki kastha relief anipichindhi...                          
-                                                Boys medha nammakam ledhu...aa surya vala motham nammakam poindhi...asalu evaritho odhu anukuna...asalu frndshps odhu rlnshps odhu asalu manushule odhu ani depress ayipoya...alantapudu nuvu vachavu ninu nammale nenu...meet ayamu kiss cheskunamu bane unamu but nana nuvu vachaka motham maripoindhi na lyf lo...
-                                                Happy ga unde dhani...heartful ga navve dhani 😘...manushulatho kalavadam start chesa...nammakam vasthundhi😘...nuvu nenu 1st tym byt ki vellindhi vjd ki 😙...tharvatha oka chinna drive ki vellamu 👐🏻...tharvatha nanu bike medha intiki drop chesavu🤓...annitilo baga gurthu undhi enti ante...beach chala istam naku😋...aa roju netho aa tym spend chyadam chala nachindhi naku...chaala haayiga anipichindhi...netho nenu na laga undagalanu nana...aa roju entha happyyyy anpichindhii ante chpalenuu words lo...chalaaaaa ante chalaaaaaaaaaa...
-                                                Nalo una chinna pilaa ne degara vachindhi aa rojuu😩...chusava ela undedhani ela ayipoyanoooo
-                           <p>
-    <button id="finalButton">
-        nextuuuu :)
-    </button>
-</p>
+                                                    <p>
 
-`;
+                                                        Mana 1st hug🫂...chala safe and chala pure ga anipichindhi...asalu physical touch antene nachani naku...ne hug oka safe place la anipichindhi
+                                                        asalu boys sex kosame approach avtharu ani anukune dhani...nammakam ledhu....ninu nammale...asalu sex ante chiraku yaak anukunedhani....but adhi pure thing ani prove chesavu 🥹...nuvu sex kosam e approach ayavu ani nenu antale but naku 1st lo adhe anipichindhi🙂...kani mana meet tharvatha...chala haayi ga undhi...bayam emi lekunda prashanthamuga undhi😮‍💨...ne kiss ne hug ne touch ne look anni safe anipichini🤞🏻...nuvu eh thought tho chesavo telidhu kani...naku mathram lust kanipile bro...evaru natho chyanivi chesavu...chudanivi nuvu chusavu...evaru nanu touch chyani way lo chesavu...chala safe and happy ga anipichindhi nana 😚
+
+                                                        aa roju gudiki veli swamy ki chpukuna...chala pure ga anipichindhi swamy...vadni etti paristhithithulalo naku dhooram chyaku ani 🥺...love ani chpalenu but oka positive feeling ne medha😌...chala bagundhii nana aa feeling
+
+                                                        Asalu dheeni vala love vachindhi ani chpatale nenu...just safe feel vachindhi...safe ani andhari degara anipidhu naku...ne degara anipichindhi chaalaa safe gaa...my safest place is ur armsss nanaaaa 😘
+
+                                                        <br><br>
+
+                                                        So finally em chpthuna ante...mana meet vala naku ne medha inka impression perigindhi...inka istam perigindhi😚
+
+                                                        <br><br>
+
+                                                        Enti alisipoyava chahdivi chadivi...inka unai daaa😁
+
+                                                    </p>
+
+                                                    <button id="nextStoryButton">
+                                                        Nokkavalenu 😆
+                                                    </button>
+
+                                                `;
 
 
+                                                // FIXED:
+                                                // HTML button = nextStoryButton
+                                                // JS now uses nextStoryButton
 
-                                                const videoQuestionButton =
-                                                    document.getElementById("videoQuestionButton");
+                                                const nextStoryButton =
+                                                    document.getElementById("nextStoryButton");
 
 
                                                 // ==================================
-                                                // → VIDEO QUESTION
+                                                // → ANOTHER STORY PAGE
                                                 // ==================================
 
-                                                videoQuestionButton.addEventListener("click", function () {
+                                                nextStoryButton.addEventListener("click", function () {
 
                                                     document.querySelector(".question-screen").innerHTML = `
 
                                                         <div class="heart">💗</div>
 
-                                                        <h1>Wanna Watch Our Videos? 🎥</h1>
+                                                        <h1>
+                                                            Before you and After you
+                                                        </h1>
 
-        <p>
-            Mana memories lo konni chinna moments...
-            <br><br>
-            Chusthava nana? ❤️
-        </p>
+                                                        <p>
 
-        <div class="buttons">
+                                                            Aa title enta anukuntunava...nuvu na life loki raka mundhu ela undedhi...nuvu vachaka ela undedhi ani chpabothunaaaaaaaaaaa....
 
-            <button id="videoYesButton">
-                YESSS ❤️
-            </button>
+                                                            Nuvu raka mundhu varaku...boys tho antha manesa inka...malli aa madhu vala parichayam ayaru thapa...valatho kuda limits lone undedhani...intiki vastha padukunta...edhoakti thidtharu padutha...happiness ledhu na lyf lo...daddy ni byt ki teskuvelamante chinna pillava ani thitte valu...intlo intlone una nenu almost 1 yr motham...aa tv thappa vere lokam ledhu...pichi ekkedhi...evaru matladaru natho roju thitte valu eamcet raledhu mains raledhu ani...nau interest ledhu vatilo ante vinale asalu...chiraku vachedhi...chachipodham anukune dhani...asalu oka peak level ki velipoya dhookedham anukuna ma terrace nunchi...naku jaanu ki himaja ki godavalu...evaru leru naku inka...sibi tho manesa...vaditho undalekapoya...act chyalekapoya...vadu chachipotha adhi idhi ani matladadu...em chyalo ardham kaka vad em ana silent udne dhani...oka point lo sex topic techadu naku nachale naku inka chala uncomfrotable ga anipichi manes avaditho blokced loki veipoyadu...dhaniki mundhu ma annayaaa ani udnevadu vadu anthe chesadu abadhalu chpi nanu restrict chesi nanu cntrl chesi...inka jeevitham emdha virakthi vachesindhi...apude chparu orientation start ani...hammayaaa anukuna vela orientation ki kastha relief anipichindhi...
 
-            <button id="videoNoButton">
-                NO 😭
-            </button>
+                                                            <br><br>
 
-        </div>
+                                                            Boys medha nammakam ledhu...aa surya vala motham nammakam poindhi...asalu evaritho odhu anukuna...asalu frndshps odhu rlnshps odhu asalu manushule odhu ani depress ayipoya...alantapudu nuvu vachavu ninu nammale nenu...meet ayamu kiss cheskunamu bane unamu but nana nuvu vachaka motham maripoindhi na lyf lo...
 
-    `;
+                                                            Happy ga unde dhani...heartful ga navve dhani 😘...manushulatho kalavadam start chesa...nammakam vasthundhi😘...nuvu nenu 1st tym byt ki vellindhi vjd ki 😙...tharvatha oka chinna drive ki vellamu 👐🏻...tharvatha nanu bike medha intiki drop chesavu🤓...annitilo baga gurthu undhi enti ante...beach chala istam naku😋...aa roju netho aa tym spend chyadam chala nachindhi naku...chaala haayiga anipichindhi...netho nenu na laga undagalanu nana...aa roju entha happyyyy anpichindhii ante chpalenuu words lo...chalaaaaa ante chalaaaaaaaaaa...
 
-    const videoYesButton =
-        document.getElementById("videoYesButton");
+                                                            Nalo una chinna pilaa ne degara vachindhi aa rojuu😩...chusava ela undedhani ela ayipoyanoooo
 
-    const videoNoButton =
-        document.getElementById("videoNoButton");
+                                                        </p>
+
+                                                        <button id="finalButton">
+                                                            nextuuuu :)
+                                                        </button>
+
+                                                    `;
 
 
-    // ================================
-    // VIDEO YES
-    // ================================
+                                                    // FIXED:
+                                                    // HTML button = finalButton
+                                                    // JS now gets finalButton directly
 
-videoYesButton.addEventListener("click", function () {
+                                                    const finalButton =
+                                                        document.getElementById("finalButton");
 
-    document.querySelector(".question-screen").innerHTML = `
 
-        <div class="heart">💗</div>
+                                                    // ==================================
+                                                    // → VIDEO QUESTION
+                                                    // ==================================
 
-        <h1>Our Little Moments 🎥❤️</h1>
+                                                    finalButton.addEventListener("click", function () {
 
-        <p>
-            Chudu nana... ❤️
-        </p>
+                                                        document.querySelector(".question-screen").innerHTML = `
 
-        <video
-            controls
-            playsinline
-            class="memory-video"
-        >
-            <source
-                src="videos/our-video.mp4"
-                type="video/mp4"
-            >
-        </video>
+                                                            <div class="heart">💗</div>
 
-        <br><br>
+                                                            <h1>
+                                                                Wanna Watch Our Videos? 🎥
+                                                            </h1>
 
-        <button id="waitButton">
-            dishummm ❤️
-        </button>
+                                                            <p>
+                                                                Mana memories lo konni chinna moments...
+                                                                <br><br>
+                                                                Chusthava nana? ❤️
+                                                            </p>
+
+                                                            <div class="buttons">
+
+                                                                <button id="videoYesButton">
+                                                                    YESSS ❤️
+                                                                </button>
+
+                                                                <button id="videoNoButton">
+                                                                    NO 😭
+                                                                </button>
+
+                                                            </div>
 
                                                         `;
 
+                                                        const videoYesButton =
+                                                            document.getElementById("videoYesButton");
 
-                                                        const videoNextButton =
-                                                            document.getElementById("videoNextButton");
+                                                        const videoNoButton =
+                                                            document.getElementById("videoNoButton");
 
 
-                                                        // ==================================
-                                                        // → STORY AFTER VIDEO
-                                                        // ==================================
+                                                        // ================================
+                                                        // VIDEO YES
+                                                        // ================================
 
-                                                        videoNextButton.addEventListener("click", function () {
+                                                        videoYesButton.addEventListener("click", function () {
 
                                                             document.querySelector(".question-screen").innerHTML = `
 
                                                                 <div class="heart">💗</div>
 
                                                                 <h1>
-                                                                    One Last Little Part... ❤️
+                                                                    Our Little Moments 🎥❤️
                                                                 </h1>
 
                                                                 <p>
-
-                                                                 Beach matter chpana nana 
-
+                                                                    Chudu nana... ❤️
                                                                 </p>
 
-                                                                <button id="lastStoryButton">
-                                                                    Next ❤️
+                                                                <video
+                                                                    controls
+                                                                    playsinline
+                                                                    class="memory-video"
+                                                                >
+                                                                    <source
+                                                                        src="videos/our-video.mp4"
+                                                                        type="video/mp4"
+                                                                    >
+                                                                </video>
+
+                                                                <br><br>
+
+                                                                <button id="waitButton">
+                                                                    dishummm ❤️
                                                                 </button>
 
                                                             `;
 
 
-                                                            const lastStoryButton =
-                                                                document.getElementById("lastStoryButton");
+                                                            // FIXED:
+                                                            // Your actual button is waitButton.
+                                                            // So use waitButton here.
+
+                                                            const waitButton =
+                                                                document.getElementById("waitButton");
 
 
                                                             // ==================================
-                                                            // → WAIT DARLING
+                                                            // → STORY AFTER VIDEO
                                                             // ==================================
 
-                                                            lastStoryButton.addEventListener("click", function () {
+                                                            waitButton.addEventListener("click", function () {
 
                                                                 document.querySelector(".question-screen").innerHTML = `
 
-                                                                    <div class="heart">❤️</div>
+                                                                    <div class="heart">💗</div>
 
                                                                     <h1>
-                                                                        Wait Darling... 🥺❤️
+                                                                        One Last Little Part... ❤️
                                                                     </h1>
 
                                                                     <p>
 
-                                                                        The story has just paused...
-
-                                                                        <br><br>
-
-                                                                        Not ended. ❤️
-
-                                                                        <br><br>
-
-                                                                        Just paused for now... 🫶🏻
+                                                                        Beach matter chpana nana
 
                                                                     </p>
 
+                                                                    <button id="lastStoryButton">
+                                                                        Next ❤️
+                                                                    </button>
+
                                                                 `;
 
+
+                                                                const lastStoryButton =
+                                                                    document.getElementById("lastStoryButton");
+
+
+                                                                // ==================================
+                                                                // → WAIT DARLING
+                                                                // ==================================
+
+                                                                lastStoryButton.addEventListener("click", function () {
+
+                                                                    document.querySelector(".question-screen").innerHTML = `
+
+                                                                        <div class="heart">❤️</div>
+
+                                                                        <h1>
+                                                                            Wait Darling... 🥺❤️
+                                                                        </h1>
+
+                                                                        <p>
+
+                                                                            The story has just paused...
+
+                                                                            <br><br>
+
+                                                                            Not ended. ❤️
+
+                                                                            <br><br>
+
+                                                                            Just paused for now... 🫶🏻
+
+                                                                        </p>
+
+                                                                    `;
+
+                                                                });
+
                                                             });
+
+                                                        });
+
+
+                                                        // ================================
+                                                        // VIDEO NO
+                                                        // ================================
+
+                                                        videoNoButton.addEventListener("click", function () {
+
+                                                            document.querySelector(".question-screen").innerHTML = `
+
+                                                                <div class="heart">🥹</div>
+
+                                                                <h1>
+                                                                    Ayyo sareee 😭❤️
+                                                                </h1>
+
+                                                                <p>
+                                                                    Inka niku naku ayipoindhii dhobbeyiiiii
+                                                                </p>
+
+                                                            `;
 
                                                         });
 
@@ -651,6 +717,37 @@ videoYesButton.addEventListener("click", function () {
                                             });
 
                                         });
+
+                                    });
+
+
+                                    // ================================
+                                    // NO ANSWER = END
+                                    // ================================
+
+                                    dateNoButton.addEventListener("click", function () {
+
+                                        document.querySelector(".question-screen").innerHTML = `
+
+                                            <div class="heart">🥹</div>
+
+                                            <h1>
+                                                Ohh... 😭❤️
+                                            </h1>
+
+                                            <p>
+                                                I hateeee youuuuu...dhobbeyiiii
+                                                <br><br>
+                                                Inka nuvu telusukoniki emi ledhu
+                                                <br><br>
+                                                Good byeeeeeeeeeeee 😤
+                                            </p>
+
+                                            <h2>
+                                                The End... 💔
+                                            </h2>
+
+                                        `;
 
                                     });
 
@@ -668,68 +765,69 @@ videoYesButton.addEventListener("click", function () {
 
         });
 
+
+        // ==================================================
+        // SAD BUTTON
+        // ==================================================
+
+        sadButton.addEventListener("click", function () {
+
+            document.querySelector(".question-screen").innerHTML = `
+
+                <div class="heart">🥺</div>
+
+                <h1>
+                    Sad... 💔
+                </h1>
+
+                <p>
+
+                    <!-- ✍️ YOU CAN ADD YOUR SAD STORY HERE -->
+
+                    WRITE YOUR SAD STORY HERE...
+
+                </p>
+
+            `;
+
+        });
+
     });
 
 
-    // ==================================================
-    // SAD BUTTON
-    // ==================================================
+    // ======================================================
+    // FIRST NO BUTTON → ESCAPE
+    // ======================================================
 
-    sadButton.addEventListener("click", function () {
+    noButton.addEventListener("mouseover", function () {
 
-        document.querySelector(".question-screen").innerHTML = `
+        const screen =
+            document.querySelector(".question-screen");
 
-            <div class="heart">🥺</div>
+        const maxX =
+            window.innerWidth -
+            noButton.offsetWidth -
+            30;
 
-            <h1>
-                Sad... 💔
-            </h1>
+        const maxY =
+            window.innerHeight -
+            noButton.offsetHeight -
+            30;
 
-            <p>
-                <!-- ✍️ YOU CAN ADD YOUR SAD STORY HERE -->
-                
-                WRITE YOUR SAD STORY HERE...
+        const randomX =
+            Math.random() * maxX;
 
-            </p>
+        const randomY =
+            Math.random() * maxY;
 
-        `;
+        noButton.style.position = "fixed";
+
+        noButton.style.left =
+            randomX + "px";
+
+        noButton.style.top =
+            randomY + "px";
 
     });
-
-});
-
-
-// ======================================================
-// FIRST NO BUTTON → ESCAPE
-// ======================================================
-
-noButton.addEventListener("mouseover", function () {
-
-    const screen =
-        document.querySelector(".question-screen");
-
-    const maxX =
-        screen.clientWidth -
-        noButton.offsetWidth -
-        20;
-
-    const maxY =
-        screen.clientHeight -
-        noButton.offsetHeight -
-        20;
-
-    const randomX =
-        Math.random() * maxX;
-
-    const randomY =
-        Math.random() * maxY;
-
-    noButton.style.position = "absolute";
-
-    noButton.style.left =
-        randomX + "px";
-
-    noButton.style.top =
-        randomY + "px";
 
 });
