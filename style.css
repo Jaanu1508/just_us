@@ -1,225 +1,120 @@
+/* ========================================
+   BASIC PAGE
+======================================== */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     min-height: 100vh;
-
-    font-family: Arial, sans-serif;
-
-    background: #b30000;
-
-    overflow: hidden;
-
-    color: white;
-}
-
-
-/* =========================
-   FLOATING HEARTS
-========================= */
-
-.hearts {
-    position: fixed;
-
-    inset: 0;
-
-    overflow: hidden;
-
-    pointer-events: none;
-
-    z-index: 0;
-}
-
-.heart {
-    position: absolute;
-
-    bottom: -50px;
-
-    color: white;
-
-    font-size: 18px;
-
-    opacity: 0.75;
-
-    animation: floatHeart linear infinite;
-}
-
-
-/* HEART POSITIONS */
-
-.heart:nth-child(1) {
-    left: 5%;
-    animation-duration: 8s;
-    font-size: 14px;
-}
-
-.heart:nth-child(2) {
-    left: 15%;
-    animation-duration: 11s;
-    animation-delay: 2s;
-    font-size: 20px;
-}
-
-.heart:nth-child(3) {
-    left: 25%;
-    animation-duration: 9s;
-    animation-delay: 4s;
-    font-size: 12px;
-}
-
-.heart:nth-child(4) {
-    left: 35%;
-    animation-duration: 13s;
-    animation-delay: 1s;
-    font-size: 18px;
-}
-
-.heart:nth-child(5) {
-    left: 45%;
-    animation-duration: 10s;
-    animation-delay: 3s;
-    font-size: 15px;
-}
-
-.heart:nth-child(6) {
-    left: 55%;
-    animation-duration: 12s;
-    animation-delay: 5s;
-    font-size: 22px;
-}
-
-.heart:nth-child(7) {
-    left: 65%;
-    animation-duration: 9s;
-    animation-delay: 2s;
-    font-size: 13px;
-}
-
-.heart:nth-child(8) {
-    left: 75%;
-    animation-duration: 14s;
-    animation-delay: 4s;
-    font-size: 19px;
-}
-
-.heart:nth-child(9) {
-    left: 85%;
-    animation-duration: 10s;
-    animation-delay: 1s;
-    font-size: 15px;
-}
-
-.heart:nth-child(10) {
-    left: 95%;
-    animation-duration: 12s;
-    animation-delay: 6s;
-    font-size: 17px;
-}
-
-.heart:nth-child(11) {
-    left: 30%;
-    animation-duration: 15s;
-    animation-delay: 5s;
-    font-size: 11px;
-}
-
-.heart:nth-child(12) {
-    left: 70%;
-    animation-duration: 11s;
-    animation-delay: 7s;
-    font-size: 16px;
-}
-
-
-@keyframes floatHeart {
-
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: translateY(-50vh) rotate(180deg);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-
-/* =========================
-   SCREENS
-========================= */
-
-.screen {
-    width: 90%;
-
-    max-width: 750px;
-
-    min-height: 100vh;
-
-    margin: auto;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
 
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(circle at top, #ffe4ef, transparent 45%),
+        linear-gradient(135deg, #ffd6e7, #f8c8dc, #ead4e8);
+
+    color: #5a3042;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   MAIN STORY SCREEN
+======================================== */
+
+.question-screen {
+    width: min(900px, 90%);
+
+    min-height: 75vh;
+
+    display: flex;
     flex-direction: column;
 
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
+    margin: auto;
+
+    padding: 45px 35px;
+
     position: relative;
 
-    z-index: 2;
-
-    padding: 30px;
-}
-
-.hidden {
-    display: none;
+    z-index: 5;
 }
 
 
-/* =========================
-   TEXT
-========================= */
+/* ========================================
+   HEADINGS
+======================================== */
 
-h1 {
-    font-size: 48px;
+.question-screen h1 {
+    font-size: clamp(30px, 5vw, 55px);
 
-    margin-bottom: 15px;
+    margin: 15px 0 25px;
 
-    color: white;
+    color: #7b294b;
 
-    text-shadow:
-        0 0 10px rgba(255,255,255,0.5),
-        0 0 25px rgba(255,255,255,0.3);
-}
-
-p {
-    font-size: 20px;
-
-    margin-bottom: 35px;
-
-    color: white;
+    line-height: 1.25;
 }
 
 
-/* =========================
-   YES / NO BUTTONS
-========================= */
+/* ========================================
+   STORY TEXT
+======================================== */
+
+.question-screen p {
+    width: min(780px, 100%);
+
+    margin: 0 auto 30px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    text-align: center;
+
+    color: #633b4c;
+}
+
+
+/* ========================================
+   HEART
+======================================== */
+
+.question-screen > .heart {
+    font-size: 45px;
+
+    margin-bottom: 5px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* ========================================
+   BUTTON CONTAINER
+======================================== */
 
 .buttons {
     display: flex;
@@ -228,188 +123,257 @@ p {
 
     align-items: center;
 
-    gap: 25px;
+    gap: 22px;
+
+    margin-top: 15px;
+
+    flex-wrap: wrap;
 }
 
-button {
-    border: none;
 
-    font-size: 18px;
+/* ========================================
+   BUBBLY / TRANSPARENT BUTTONS
+======================================== */
+
+button {
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    background: rgba(255, 255, 255, 0.28);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #7b294b;
+
+    font-size: 17px;
 
     font-weight: bold;
 
+    padding: 14px 30px;
+
+    border-radius: 999px;
+
     cursor: pointer;
 
-    transition: 0.25s ease;
+    box-shadow:
+        0 8px 25px rgba(120, 40, 75, 0.15),
+        inset 0 1px 2px rgba(255, 255, 255, 0.7);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
-#yesBtn {
-    padding: 15px 35px;
+button:hover {
+    transform: translateY(-4px) scale(1.04);
 
-    border-radius: 30px;
-
-    background: white;
-
-    color: #b30000;
+    background: rgba(255, 255, 255, 0.48);
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.25);
-}
-
-#yesBtn:hover {
-    transform: scale(1.1);
+        0 12px 30px rgba(120, 40, 75, 0.2),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
 }
 
 
-#noBtn {
-    padding: 15px 35px;
-
-    border-radius: 30px;
-
-    background: transparent;
-
-    color: white;
-
-    border: 2px solid white;
-
-    position: relative;
+button:active {
+    transform: scale(0.96);
 }
 
 
-/* =========================
-   HAPPY / SAD BUBBLES
-========================= */
+/* ========================================
+   PHOTOS
+======================================== */
 
-.choice-container {
-    display: flex;
+.couple-photo {
+    width: min(430px, 85%);
 
-    justify-content: center;
+    max-height: 450px;
 
-    align-items: center;
+    object-fit: cover;
 
-    gap: 35px;
+    border-radius: 25px;
 
-    flex-wrap: wrap;
+    margin: 20px auto 25px;
 
-    margin-top: 25px;
-}
-
-.choice {
-    width: 230px;
-
-    height: 190px;
-
-    border-radius: 50%;
-
-    background: #ff8fab;
-
-    color: white;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
+    display: block;
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,0.3);
+        0 15px 40px rgba(80, 30, 50, 0.25);
 
-    border: 4px solid rgba(255,255,255,0.7);
-
-    text-shadow:
-        0 2px 5px rgba(0,0,0,0.2);
-}
-
-.choice:hover {
-    transform: scale(1.08);
-
-    background: #ff7197;
-}
-
-.choice span {
-    font-size: 55px;
-
-    margin-bottom: 12px;
-}
-
-.choice strong {
-    font-size: 22px;
+    border: 3px solid rgba(255, 255, 255, 0.65);
 }
 
 
-/* =========================
-   HAPPY / SAD CONTENT
-========================= */
+/* ========================================
+   VIDEO
+======================================== */
 
-.matter-box {
-    background: rgba(255,255,255,0.12);
+.memory-video {
+    width: min(700px, 90%);
 
-    border: 2px solid rgba(255,255,255,0.4);
+    max-height: 65vh;
 
-    border-radius: 30px;
+    border-radius: 22px;
 
-    padding: 45px 35px;
+    display: block;
 
-    backdrop-filter: blur(5px);
+    margin: 20px auto;
 
     box-shadow:
-        0 15px 50px rgba(0,0,0,0.25);
-
-    max-width: 650px;
-}
-
-.matter-box h2 {
-    font-size: 35px;
-
-    margin-bottom: 20px;
-
-    color: white;
-}
-
-.matter-box p {
-    line-height: 1.8;
-
-    font-size: 19px;
-
-    color: white;
-
-    margin-bottom: 0;
+        0 15px 40px rgba(80, 30, 50, 0.25);
 }
 
 
-/* =========================
+/* ========================================
+   FLOATING HEARTS
+======================================== */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.hearts .heart {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 25px;
+
+    animation: floatHeart 10s linear infinite;
+}
+
+.hearts .heart:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts .heart:nth-child(2) {
+    left: 13%;
+    animation-delay: 2s;
+}
+
+.hearts .heart:nth-child(3) {
+    left: 22%;
+    animation-delay: 5s;
+}
+
+.hearts .heart:nth-child(4) {
+    left: 31%;
+    animation-delay: 1s;
+}
+
+.hearts .heart:nth-child(5) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.hearts .heart:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.hearts .heart:nth-child(7) {
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.hearts .heart:nth-child(8) {
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.hearts .heart:nth-child(9) {
+    left: 78%;
+    animation-delay: 1s;
+}
+
+.hearts .heart:nth-child(10) {
+    left: 86%;
+    animation-delay: 4s;
+}
+
+.hearts .heart:nth-child(11) {
+    left: 92%;
+    animation-delay: 6s;
+}
+
+.hearts .heart:nth-child(12) {
+    left: 97%;
+    animation-delay: 3s;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ========================================
    MOBILE
-========================= */
+======================================== */
 
 @media (max-width: 600px) {
 
-    h1 {
-        font-size: 34px;
+    .question-screen {
+        width: 94%;
+
+        min-height: 85vh;
+
+        padding: 30px 18px;
     }
 
-    p {
-        font-size: 17px;
+    .question-screen h1 {
+        font-size: 32px;
     }
 
-    .choice {
-        width: 190px;
+    .question-screen p {
+        font-size: 16px;
 
-        height: 160px;
+        line-height: 1.75;
     }
 
-    .choice span {
-        font-size: 45px;
+    button {
+        font-size: 15px;
+
+        padding: 12px 24px;
     }
 
     .buttons {
-        gap: 15px;
+        gap: 14px;
     }
 
-    #yesBtn,
-    #noBtn {
-        padding: 13px 25px;
+    .couple-photo {
+        width: 90%;
     }
+
 }
