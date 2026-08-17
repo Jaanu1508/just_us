@@ -1,6 +1,6 @@
-/* =========================================================
+/* ========================================
    RESET
-========================================================= */
+======================================== */
 
 * {
     margin: 0;
@@ -9,215 +9,172 @@
 }
 
 
-/* =========================================================
-   HTML + BODY
-========================================================= */
-
-html {
-    width: 100%;
-    min-height: 100%;
-    background: #7a0000 !important;
-}
+/* ========================================
+   BODY
+======================================== */
 
 body {
-    width: 100%;
     min-height: 100vh;
-
-    margin: 0;
-    padding: 0;
 
     font-family: Arial, sans-serif;
 
-    background-color: #7a0000 !important;
-    background: #7a0000 !important;
+    background: #8B0000;
 
-    color: white;
+    color: #ff4f9a;
 
     overflow-x: hidden;
 }
 
 
-/* =========================================================
-   FLOATING HEARTS
-========================================================= */
+/* ========================================
+   FLOATING WHITE HEARTS
+======================================== */
 
 .hearts {
     position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
 
     overflow: hidden;
 
     pointer-events: none;
 
     z-index: 0;
-
-    background: transparent !important;
 }
 
-
-.heart {
+.hearts .heart {
     position: absolute;
 
-    bottom: -70px;
+    bottom: -50px;
 
-    color: #ffffff !important;
+    color: white;
 
-    background: transparent !important;
+    font-size: 18px;
 
-    font-size: 20px;
-
-    opacity: 0.9 !important;
-
-    pointer-events: none;
-
-    text-shadow:
-        0 0 8px rgba(255,255,255,0.45);
+    opacity: 0.8;
 
     animation: floatHeart linear infinite;
 }
 
 
-/* =========================================================
-   HEART POSITIONS
-========================================================= */
+/* HEART POSITIONS */
 
-.heart:nth-child(1) {
-    left: 4%;
-    font-size: 15px;
+.hearts .heart:nth-child(1) {
+    left: 5%;
     animation-duration: 8s;
+    font-size: 14px;
 }
 
-.heart:nth-child(2) {
-    left: 12%;
-    font-size: 22px;
+.hearts .heart:nth-child(2) {
+    left: 15%;
     animation-duration: 11s;
     animation-delay: 2s;
+    font-size: 20px;
 }
 
-.heart:nth-child(3) {
-    left: 20%;
-    font-size: 14px;
+.hearts .heart:nth-child(3) {
+    left: 25%;
     animation-duration: 9s;
     animation-delay: 4s;
+    font-size: 12px;
 }
 
-.heart:nth-child(4) {
-    left: 29%;
-    font-size: 20px;
+.hearts .heart:nth-child(4) {
+    left: 35%;
     animation-duration: 13s;
     animation-delay: 1s;
+    font-size: 18px;
 }
 
-.heart:nth-child(5) {
-    left: 38%;
-    font-size: 16px;
+.hearts .heart:nth-child(5) {
+    left: 45%;
     animation-duration: 10s;
     animation-delay: 3s;
+    font-size: 15px;
 }
 
-.heart:nth-child(6) {
-    left: 48%;
-    font-size: 24px;
+.hearts .heart:nth-child(6) {
+    left: 55%;
     animation-duration: 12s;
     animation-delay: 5s;
+    font-size: 22px;
 }
 
-.heart:nth-child(7) {
-    left: 58%;
-    font-size: 14px;
+.hearts .heart:nth-child(7) {
+    left: 65%;
     animation-duration: 9s;
     animation-delay: 2s;
+    font-size: 13px;
 }
 
-.heart:nth-child(8) {
-    left: 67%;
-    font-size: 21px;
+.hearts .heart:nth-child(8) {
+    left: 75%;
     animation-duration: 14s;
     animation-delay: 4s;
+    font-size: 19px;
 }
 
-.heart:nth-child(9) {
-    left: 76%;
-    font-size: 16px;
+.hearts .heart:nth-child(9) {
+    left: 85%;
     animation-duration: 10s;
     animation-delay: 1s;
+    font-size: 15px;
 }
 
-.heart:nth-child(10) {
-    left: 86%;
-    font-size: 20px;
+.hearts .heart:nth-child(10) {
+    left: 95%;
     animation-duration: 12s;
     animation-delay: 6s;
+    font-size: 17px;
 }
 
-.heart:nth-child(11) {
-    left: 34%;
-    font-size: 12px;
+.hearts .heart:nth-child(11) {
+    left: 30%;
     animation-duration: 15s;
     animation-delay: 5s;
+    font-size: 11px;
 }
 
-.heart:nth-child(12) {
-    left: 72%;
-    font-size: 18px;
+.hearts .heart:nth-child(12) {
+    left: 70%;
     animation-duration: 11s;
     animation-delay: 7s;
+    font-size: 16px;
 }
 
-
-/* =========================================================
-   HEART ANIMATION
-========================================================= */
 
 @keyframes floatHeart {
 
     0% {
         transform: translateY(0) rotate(0deg);
-
         opacity: 0;
     }
 
     10% {
-        opacity: 0.9;
+        opacity: 0.8;
     }
 
     50% {
-        transform:
-            translateY(-50vh)
-            rotate(180deg);
-
-        opacity: 0.9;
+        transform: translateY(-50vh) rotate(180deg);
+        opacity: 0.8;
     }
 
     100% {
-        transform:
-            translateY(-115vh)
-            rotate(360deg);
-
+        transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
 }
 
 
-/* =========================================================
+/* ========================================
    MAIN SCREEN
-========================================================= */
+======================================== */
 
 .question-screen {
-    position: relative;
-
-    z-index: 2;
-
     width: 100%;
 
     min-height: 100vh;
 
-    padding: 45px 25px;
+    padding: 40px 25px;
 
     display: flex;
 
@@ -229,83 +186,104 @@ body {
 
     text-align: center;
 
-    background: transparent !important;
+    position: relative;
+
+    z-index: 2;
 }
 
 
-/* =========================================================
-   HEADINGS
-========================================================= */
+/* ========================================
+   ALL HEADINGS
+   DEEP PINK
+======================================== */
 
-h1 {
-    color: #ffffff !important;
-
-    font-size: clamp(32px, 5vw, 52px);
-
-    line-height: 1.2;
-
-    margin-bottom: 18px;
+h1,
+h2,
+h3 {
+    color: #ff4f9a;
 
     text-align: center;
 
     text-shadow:
-        0 0 10px rgba(255,255,255,0.4),
-        0 0 25px rgba(255,255,255,0.2);
-}
-
-
-h2 {
-    color: #ffffff !important;
-
-    font-size: clamp(28px, 4vw, 40px);
-
-    line-height: 1.2;
+        0 0 10px rgba(255, 79, 154, 0.45),
+        0 0 25px rgba(255, 79, 154, 0.2);
 
     margin-bottom: 20px;
-
-    text-align: center;
 }
 
 
-/* =========================================================
-   PARAGRAPHS / STORY
-========================================================= */
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+
+/* ========================================
+   ALL STORY TEXT
+   DEEP PINK
+======================================== */
 
 p {
-    color: #ffffff !important;
+    max-width: 850px;
+
+    color: #ff4f9a;
 
     font-size: 19px;
 
     line-height: 1.8;
 
-    max-width: 900px;
-
-    width: 100%;
-
-    margin: 0 auto 30px;
-
     text-align: center;
 
-    overflow-wrap: break-word;
+    margin-bottom: 30px;
 }
 
 
-/*
-   Keeps your long story centered
-*/
+/* STRONG TEXT */
 
-.question-screen p {
-    margin-left: auto;
-
-    margin-right: auto;
-
-    text-align: center;
+strong {
+    color: #ff4f9a;
 }
 
 
-/* =========================================================
-   BUTTON AREA
-========================================================= */
+/* ========================================
+   HEART INSIDE STORY
+======================================== */
+
+.question-screen > .heart {
+    position: static;
+
+    color: #ff4f9a;
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ========================================
+   BUTTON CONTAINER
+======================================== */
 
 .buttons {
     display: flex;
@@ -317,324 +295,176 @@ p {
     gap: 22px;
 
     flex-wrap: wrap;
-
-    margin-top: 10px;
 }
 
 
-/* =========================================================
+/* ========================================
    ALL BUTTONS
-========================================================= */
+   BABY PINK
+======================================== */
 
 button {
     border: none !important;
 
-    outline: none !important;
+    outline: none;
 
-    appearance: none;
+    background: #ffb6c9 !important;
 
-    -webkit-appearance: none;
+    color: #ff4f9a !important;
 
     padding: 15px 32px;
 
-    min-width: 145px;
-
-    border-radius: 50px;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 17px;
+    font-size: 18px;
 
     font-weight: bold;
 
+    border-radius: 30px;
+
     cursor: pointer;
 
-    color: #7a0000;
-
-    background: rgba(255,255,255,0.88) !important;
+    transition: all 0.25s ease;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.25);
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
-
-    position: relative;
-
-    z-index: 10;
+        0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
+
+/* HOVER */
 
 button:hover {
+    background: #ffc1d2 !important;
+
+    color: #ff2f86 !important;
+
     transform: scale(1.08);
 
-    background: rgba(255,255,255,0.98) !important;
-
     box-shadow:
-        0 12px 32px rgba(0,0,0,0.32);
+        0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+
+/* CLICK */
 
 button:active {
     transform: scale(0.96);
 }
 
 
-/* =========================================================
-   FIRST YES
-========================================================= */
-
-#yesButton {
-    background: rgba(255,255,255,0.95) !important;
-
-    color: #7a0000 !important;
-
-    border: none !important;
-}
-
-
-/* =========================================================
-   FIRST NO
-========================================================= */
-
-#noButton {
-    background: rgba(255,255,255,0.14) !important;
-
-    color: #ffffff !important;
-
-    border: none !important;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.18);
-}
-
-
-#noButton:hover {
-    background: rgba(255,255,255,0.22) !important;
-
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   ALL BUTTONS CREATED BY SCRIPT.JS
-========================================================= */
+/* ========================================
+   HAPPY / SAD BUTTONS
+======================================== */
 
 #happyButton,
-#sadButton,
+#sadButton {
+    background: #ffb6c9 !important;
+
+    color: #ff4f9a !important;
+
+    border: none !important;
+}
+
+
+/* ========================================
+   YES / NO BUTTONS
+======================================== */
+
+#yesButton,
+#noButton,
 #storyYesButton,
 #storyNoButton,
-#storyStartButton,
-#beginningButton,
-#firstMeetingNext,
-#nextChapterButton,
-#chapterButton,
-#memoryNextButton,
 #dateYesButton,
 #dateNoButton,
-#yesNextButton,
-#nextStoryButton,
-#finalButton,
 #videoYesButton,
-#videoNoButton,
-#waitButton,
-#lastStoryButton {
-
-    border: none !important;
-
-    outline: none !important;
-
-    border-radius: 50px;
-
-    background: rgba(255,255,255,0.9) !important;
-
-    color: #7a0000 !important;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,0.25);
-
-    margin: 8px;
-}
-
-
-/* =========================================================
-   NO / SAD STYLE
-========================================================= */
-
-#sadButton,
-#storyNoButton,
-#dateNoButton,
 #videoNoButton {
+    background: #ffb6c9 !important;
 
-    background: rgba(255,255,255,0.14) !important;
-
-    color: #ffffff !important;
+    color: #ff4f9a !important;
 
     border: none !important;
 }
 
 
-/* =========================================================
-   STORY IMAGE
-========================================================= */
+/* ========================================
+   PHOTO
+======================================== */
 
 .couple-photo {
-
     display: block;
 
-    width: min(400px, 85vw);
+    width: min(90%, 500px);
 
     max-height: 500px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    margin: 20px auto 30px;
-
-    border: none;
+    margin: 25px auto;
 
     border-radius: 25px;
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,0.4);
+        0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
 
-/* =========================================================
+/* ========================================
    VIDEO
-========================================================= */
+======================================== */
 
 .memory-video {
-
     display: block;
 
-    width: min(850px, 90vw);
+    width: min(90%, 650px);
 
-    max-height: 65vh;
+    max-height: 500px;
 
     margin: 20px auto;
 
-    border: none;
-
     border-radius: 25px;
 
     box-shadow:
-        0 15px 45px rgba(0,0,0,0.4);
+        0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
 
-/* =========================================================
-   STRONG TEXT
-========================================================= */
-
-strong {
-    color: #ffffff !important;
-
-    font-weight: bold;
-}
-
-
-/* =========================================================
-   HEART INSIDE STORY SCREENS
-========================================================= */
-
-.question-screen > .heart {
-
-    position: static;
-
-    color: #ffffff !important;
-
-    background: transparent !important;
-
-    font-size: 40px;
-
-    margin-bottom: 12px;
-
-    opacity: 1 !important;
-
-    animation: none;
-}
-
-
-/* =========================================================
+/* ========================================
    MOBILE
-========================================================= */
+======================================== */
 
 @media (max-width: 600px) {
 
     .question-screen {
-        padding: 35px 18px;
+        padding: 30px 18px;
     }
-
 
     h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
-
 
     h2 {
-        font-size: 28px;
+        font-size: 27px;
     }
 
-
     p {
-        font-size: 16px;
+        font-size: 17px;
 
         line-height: 1.7;
     }
 
+    button {
+        padding: 13px 25px;
+
+        font-size: 16px;
+    }
 
     .buttons {
-        gap: 12px;
+        gap: 14px;
     }
-
-
-    button {
-        padding: 13px 24px;
-
-        min-width: 125px;
-
-        font-size: 15px;
-    }
-
 
     .couple-photo {
-        width: 85vw;
-
-        max-height: 420px;
+        width: 90%;
     }
-
 
     .memory-video {
-        width: 92vw;
+        width: 95%;
     }
-}
-
-
-/* =========================================================
-   EXTRA SAFETY — KEEP EVERYTHING BLOOD RED
-========================================================= */
-
-html,
-body,
-.question-screen {
-    background-color: #7a0000 !important;
-}
-
-.hearts {
-    background-color: transparent !important;
-}
-
-.heart {
-    color: #ffffff !important;
-}
-.couple-photo {
-    display: block;
-    width: min(90%, 500px);
-    max-height: 500px;
-    object-fit: contain;
-    margin: 25px auto;
-    border-radius: 25px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
