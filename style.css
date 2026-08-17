@@ -1,78 +1,432 @@
-/* ========================================
-   DARK RED + WHITE HEARTS
-======================================== */
+/* =====================================================
+   FINAL LOOK — BLOOD RED + WHITE HEARTS
+===================================================== */
 
-.hearts .heart {
-    position: absolute;
-
-    color: #8B0000;
-
-    font-size: 38px;
-
-    opacity: 1;
-
-    animation: floatingHearts 8s linear infinite;
-}
-
-
-/* DARK RED HEARTS */
-
-.hearts .heart:nth-child(odd) {
-    color: #8B0000;
-}
-
-
-/* WHITE HEARTS WITH DARK RED GLOW */
-
-.hearts .heart:nth-child(even) {
-    color: #ffffff;
-
-    text-shadow:
-        0 0 6px #8B0000,
-        0 0 12px #8B0000,
-        0 0 20px #8B0000;
-}
-
-
-/* BACKGROUND */
-
+html,
 body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
     min-height: 100vh;
 
     background:
         radial-gradient(
             circle at center,
             #ffffff 0%,
-            #fffafa 65%,
-            #f8eeee 100%
+            #fffafa 45%,
+            #f3dddd 100%
         );
 
     overflow-x: hidden;
 }
 
 
-/* FLOATING ANIMATION */
+/* =====================================================
+   MAIN STORY SCREEN — ALWAYS CENTERED
+===================================================== */
 
-@keyframes floatingHearts {
+.question-screen {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 25px;
+
+    margin: 0 auto;
+
+    overflow-y: auto;
+}
+
+
+/* =====================================================
+   STORY HEADING
+===================================================== */
+
+.question-screen h1 {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 15px auto;
+
+    text-align: center;
+
+    color: #8b0000;
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   STORY MATTER
+===================================================== */
+
+.question-screen p {
+    width: min(850px, 90%);
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    color: #4a1717;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   HEART ABOVE STORY
+===================================================== */
+
+.question-screen > .heart {
+    color: #8b0000;
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+@keyframes heartbeat {
 
     0% {
-        transform: translateY(110vh) rotate(0deg);
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    width: 100%;
+
+    margin: 30px auto;
+}
+
+
+/* =====================================================
+   BUBBLY TRANSPARENT BUTTONS
+===================================================== */
+
+button {
+    border: none !important;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    color: #8b0000;
+
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(139, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 12px 30px rgba(139, 0, 0, 0.25);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =====================================================
+   FLOATING HEART BACKGROUND
+===================================================== */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* EVERY FLOATING HEART */
+
+.hearts .heart {
+    position: absolute;
+
+    bottom: -60px;
+
+    font-size: 35px;
+
+    animation:
+        bloodHeartFloat 9s linear infinite;
+
+    opacity: 0;
+}
+
+
+/* BLOOD RED HEARTS */
+
+.hearts .heart:nth-child(odd) {
+    color: #8b0000;
+
+    text-shadow:
+        0 0 5px rgba(139, 0, 0, 0.4);
+}
+
+
+/* WHITE HEARTS */
+
+.hearts .heart:nth-child(even) {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 5px #8b0000,
+        0 0 12px #8b0000;
+}
+
+
+/* =====================================================
+   DIFFERENT HEART POSITIONS
+===================================================== */
+
+.hearts .heart:nth-child(1) {
+    left: 3%;
+    font-size: 35px;
+    animation-delay: 0s;
+}
+
+.hearts .heart:nth-child(2) {
+    left: 11%;
+    font-size: 45px;
+    animation-delay: 2s;
+}
+
+.hearts .heart:nth-child(3) {
+    left: 20%;
+    font-size: 28px;
+    animation-delay: 4s;
+}
+
+.hearts .heart:nth-child(4) {
+    left: 29%;
+    font-size: 50px;
+    animation-delay: 1s;
+}
+
+.hearts .heart:nth-child(5) {
+    left: 38%;
+    font-size: 32px;
+    animation-delay: 3s;
+}
+
+.hearts .heart:nth-child(6) {
+    left: 48%;
+    font-size: 45px;
+    animation-delay: 5s;
+}
+
+.hearts .heart:nth-child(7) {
+    left: 58%;
+    font-size: 30px;
+    animation-delay: 1.5s;
+}
+
+.hearts .heart:nth-child(8) {
+    left: 67%;
+    font-size: 52px;
+    animation-delay: 3.5s;
+}
+
+.hearts .heart:nth-child(9) {
+    left: 76%;
+    font-size: 35px;
+    animation-delay: 2.5s;
+}
+
+.hearts .heart:nth-child(10) {
+    left: 84%;
+    font-size: 45px;
+    animation-delay: 5.5s;
+}
+
+.hearts .heart:nth-child(11) {
+    left: 91%;
+    font-size: 30px;
+    animation-delay: 6s;
+}
+
+.hearts .heart:nth-child(12) {
+    left: 97%;
+    font-size: 42px;
+    animation-delay: 7s;
+}
+
+
+/* =====================================================
+   HEART FLOATING ANIMATION
+===================================================== */
+
+@keyframes bloodHeartFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
         opacity: 0;
     }
 
     10% {
-        opacity: 1;
+        opacity: 0.9;
     }
 
     50% {
-        transform: translateY(50vh) rotate(180deg);
-        opacity: 1;
+        transform:
+            translateY(-50vh)
+            rotate(180deg)
+            scale(1);
+    }
+
+    90% {
+        opacity: 0.9;
     }
 
     100% {
-        transform: translateY(-15vh) rotate(360deg);
+        transform:
+            translateY(-120vh)
+            rotate(360deg)
+            scale(0.8);
+
         opacity: 0;
     }
+}
 
+
+/* =====================================================
+   PHOTO
+===================================================== */
+
+.couple-photo {
+    display: block;
+
+    width: min(350px, 80%);
+
+    height: auto;
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(139, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.memory-video {
+    display: block;
+
+    width: min(700px, 90%);
+
+    margin: 25px auto;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(139, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .question-screen {
+        padding: 40px 15px;
+    }
+
+    .question-screen p {
+        width: 94%;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    button {
+        padding: 12px 23px;
+        font-size: 15px;
+    }
 }
