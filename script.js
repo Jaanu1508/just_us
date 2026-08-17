@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </h1>
 
                                     <img
-                                        src="photo 1.jpeg"
+                                        src="Photo 1.jpeg"
                                         class="couple-photo"
                                     >
 
