@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="heart">💗</div>
 
-            <h1>What do you wanna read? ❤️</h1>
+            <h1>Hiiiiiiiiiiiiii ❤️</h1>
 
             <p>
                 Choose one...
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="buttons">
 
                 <button id="happyButton">
-                    HAPPY 😊
+                    I LOVE YOU 💋
                 </button>
 
                 <button id="sadButton">
-                    SAD 🥺
+                    I HATE YOU 💔
                 </button>
 
             </div>
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="heart">💗</div>
 
                 <h1>
-                    Hy Bangaram... ❤️
+                    Heyyyyy Bangaram... ❤️
                 </h1>
 
                 <p>
-                    Wanna see our story? 🥹
+                    Wanna see our story? 💕
                 </p>
 
                 <div class="buttons">
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </button>
 
                     <button id="storyNoButton">
-                        NO 😭
+                        NO 🔪
                     </button>
 
                 </div>
