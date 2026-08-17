@@ -1,6 +1,6 @@
-/* ========================================
+/* =========================================
    RESET
-======================================== */
+========================================= */
 
 * {
     margin: 0;
@@ -9,30 +9,34 @@
 }
 
 
-/* ========================================
-   BODY
-======================================== */
+/* =========================================
+   BODY — BLOOD RED
+========================================= */
 
 body {
     min-height: 100vh;
+    width: 100%;
+
+    background: #8b0000 !important;
+
+    color: #ff4f9a !important;
 
     font-family: Arial, sans-serif;
-
-    background: #8B0000;
-
-    color: #ff4f9a;
 
     overflow-x: hidden;
 }
 
 
-/* ========================================
+/* =========================================
    FLOATING WHITE HEARTS
-======================================== */
+========================================= */
 
 .hearts {
     position: fixed;
     inset: 0;
+
+    width: 100%;
+    height: 100%;
 
     overflow: hidden;
 
@@ -46,9 +50,7 @@ body {
 
     bottom: -50px;
 
-    color: white;
-
-    font-size: 18px;
+    color: #ffffff !important;
 
     opacity: 0.8;
 
@@ -56,7 +58,9 @@ body {
 }
 
 
-/* HEART POSITIONS */
+/* =========================================
+   HEART ANIMATION
+========================================= */
 
 .hearts .heart:nth-child(1) {
     left: 5%;
@@ -165,14 +169,17 @@ body {
 }
 
 
-/* ========================================
-   MAIN SCREEN
-======================================== */
+/* =========================================
+   YOUR MAIN SCREEN
+========================================= */
 
 .question-screen {
-    width: 100%;
+    position: relative;
+
+    z-index: 5;
 
     min-height: 100vh;
+    width: 100%;
 
     padding: 40px 25px;
 
@@ -185,107 +192,112 @@ body {
     align-items: center;
 
     text-align: center;
-
-    position: relative;
-
-    z-index: 2;
 }
 
 
-/* ========================================
-   ALL HEADINGS
-   DEEP PINK
-======================================== */
+/* =========================================
+   ALL TEXT — PINK
+========================================= */
 
-h1,
-h2,
-h3 {
-    color: #ff4f9a;
+.question-screen h1,
+.question-screen h2,
+.question-screen h3 {
+    color: #ff4f9a !important;
 
     text-align: center;
 
     text-shadow:
-        0 0 10px rgba(255, 79, 154, 0.45),
-        0 0 25px rgba(255, 79, 154, 0.2);
-
-    margin-bottom: 20px;
+        0 0 10px rgba(255, 79, 154, 0.5),
+        0 0 25px rgba(255, 79, 154, 0.25);
 }
 
 
-h1 {
-    font-size: 45px;
-}
+.question-screen p {
+    color: #ff4f9a !important;
 
-h2 {
-    font-size: 34px;
-}
-
-
-/* ========================================
-   ALL STORY TEXT
-   DEEP PINK
-======================================== */
-
-p {
-    max-width: 850px;
-
-    color: #ff4f9a;
+    text-align: center;
 
     font-size: 19px;
 
     line-height: 1.8;
 
-    text-align: center;
+    max-width: 900px;
 
     margin-bottom: 30px;
 }
 
 
-/* STRONG TEXT */
-
-strong {
-    color: #ff4f9a;
+.question-screen strong {
+    color: #ff4f9a !important;
 }
 
 
-/* ========================================
-   HEART INSIDE STORY
-======================================== */
+/* =========================================
+   THE SMALL HEART ON EVERY STORY PAGE
+========================================= */
 
 .question-screen > .heart {
-    position: static;
+    position: static !important;
 
-    color: #ff4f9a;
+    color: #ff4f9a !important;
 
     font-size: 45px;
 
-    margin-bottom: 10px;
-
-    animation: heartbeat 1.5s infinite;
+    margin-bottom: 15px;
 }
 
 
-@keyframes heartbeat {
+/* =========================================
+   BUTTONS
+   ALL = BABY PINK
+========================================= */
 
-    0% {
-        transform: scale(1);
-    }
+.question-screen button {
+    background: #ffb6c9 !important;
 
-    50% {
-        transform: scale(1.15);
-    }
+    color: #ff4f9a !important;
 
-    100% {
-        transform: scale(1);
-    }
+    border: none !important;
+
+    outline: none !important;
+
+    padding: 15px 32px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
 }
 
 
-/* ========================================
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.question-screen button:hover {
+    background: #ffc1d2 !important;
+
+    color: #ff2f86 !important;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
    BUTTON CONTAINER
-======================================== */
+========================================= */
 
-.buttons {
+.question-screen .buttons {
     display: flex;
 
     justify-content: center;
@@ -298,95 +310,9 @@ strong {
 }
 
 
-/* ========================================
-   ALL BUTTONS
-   BABY PINK
-======================================== */
-
-button {
-    border: none !important;
-
-    outline: none;
-
-    background: #ffb6c9 !important;
-
-    color: #ff4f9a !important;
-
-    padding: 15px 32px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    border-radius: 30px;
-
-    cursor: pointer;
-
-    transition: all 0.25s ease;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-
-/* HOVER */
-
-button:hover {
-    background: #ffc1d2 !important;
-
-    color: #ff2f86 !important;
-
-    transform: scale(1.08);
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-
-/* CLICK */
-
-button:active {
-    transform: scale(0.96);
-}
-
-
-/* ========================================
-   HAPPY / SAD BUTTONS
-======================================== */
-
-#happyButton,
-#sadButton {
-    background: #ffb6c9 !important;
-
-    color: #ff4f9a !important;
-
-    border: none !important;
-}
-
-
-/* ========================================
-   YES / NO BUTTONS
-======================================== */
-
-#yesButton,
-#noButton,
-#storyYesButton,
-#storyNoButton,
-#dateYesButton,
-#dateNoButton,
-#videoYesButton,
-#videoNoButton {
-    background: #ffb6c9 !important;
-
-    color: #ff4f9a !important;
-
-    border: none !important;
-}
-
-
-/* ========================================
+/* =========================================
    PHOTO
-======================================== */
+========================================= */
 
 .couple-photo {
     display: block;
@@ -397,7 +323,7 @@ button:active {
 
     object-fit: contain;
 
-    margin: 25px auto;
+    margin: 20px auto;
 
     border-radius: 25px;
 
@@ -406,9 +332,9 @@ button:active {
 }
 
 
-/* ========================================
+/* =========================================
    VIDEO
-======================================== */
+========================================= */
 
 .memory-video {
     display: block;
@@ -426,9 +352,9 @@ button:active {
 }
 
 
-/* ========================================
+/* =========================================
    MOBILE
-======================================== */
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -436,35 +362,23 @@ button:active {
         padding: 30px 18px;
     }
 
-    h1 {
+    .question-screen h1 {
         font-size: 32px;
     }
 
-    h2 {
+    .question-screen h2 {
         font-size: 27px;
     }
 
-    p {
+    .question-screen p {
         font-size: 17px;
 
         line-height: 1.7;
     }
 
-    button {
+    .question-screen button {
         padding: 13px 25px;
 
         font-size: 16px;
-    }
-
-    .buttons {
-        gap: 14px;
-    }
-
-    .couple-photo {
-        width: 90%;
-    }
-
-    .memory-video {
-        width: 95%;
     }
 }
